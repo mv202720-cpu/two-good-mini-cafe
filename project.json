@@ -1,0 +1,26 @@
+{
+  "overview": "Two Good Mini Café — a premium street café website in Delhi with a full Swiggy/Zomato-style ordering system. Customers can browse 200+ menu items across 16 categories, add items to a cart, and place orders directly on the website, in addition to WhatsApp ordering.",
+  "features": [
+    "Cart system with quantity controls and live item count badge",
+    "Checkout page with delivery details form and order summary",
+    "Order confirmation with unique order number",
+    "Cart persists across page refreshes",
+    "WhatsApp ordering preserved on every menu item",
+    "GST 5% + ₹20 delivery fee calculated automatically",
+    "Glassmorphic premium UI with orange, black, white palette",
+    "Mobile-first responsive design",
+    "200+ menu items across 16 categories"
+  ],
+  "category": "food-beverage",
+  "tags": [
+    "cafe",
+    "food-ordering",
+    "menu",
+    "cart",
+    "checkout",
+    "delhi",
+    "street-food",
+    "premium"
+  ],
+  "last_updated": "2026-04-21T16:36:10.961Z"
+}

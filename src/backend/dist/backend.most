@@ -1,0 +1,35 @@
+// Version: 1.0.0
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type OrderItem__241319351 =
+  {name : Text; price : Nat; quantity : Nat; selectedPriceLabel : Text};
+type OrderStatus__272730104 = {#confirmed; #pending};
+type Order__141779993 =
+  {
+    customerName : Text;
+    deliveryAddress : Text;
+    deliveryFee : Nat;
+    grandTotal : Nat;
+    gst : Nat;
+    id : Nat;
+    items : [OrderItem__241319351];
+    phone : Text;
+    status : OrderStatus__272730104;
+    subtotal : Nat;
+    timestamp : Int
+  };
+actor {
+  stable var nextOrderId : Nat;
+  stable orders :
+    {
+      var root : Node__46230540<Nat, Order__141779993>;
+      var size : Nat__490723111
+    }
+};

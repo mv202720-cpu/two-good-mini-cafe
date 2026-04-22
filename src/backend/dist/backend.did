@@ -1,0 +1,41 @@
+type PlaceOrderRequest = 
+ record {
+   customerName: text;
+   deliveryAddress: text;
+   deliveryFee: nat;
+   grandTotal: nat;
+   gst: nat;
+   items: vec OrderItem;
+   phone: text;
+   subtotal: nat;
+ };
+type OrderStatus = 
+ variant {
+   confirmed;
+   pending;
+ };
+type OrderItem = 
+ record {
+   name: text;
+   price: nat;
+   quantity: nat;
+   selectedPriceLabel: text;
+ };
+type Order = 
+ record {
+   customerName: text;
+   deliveryAddress: text;
+   deliveryFee: nat;
+   grandTotal: nat;
+   gst: nat;
+   id: nat;
+   items: vec OrderItem;
+   phone: text;
+   status: OrderStatus;
+   subtotal: nat;
+   timestamp: int;
+ };
+service : {
+  getOrder: (id: nat) -> (opt Order) query;
+  placeOrder: (req: PlaceOrderRequest) -> (nat);
+}
